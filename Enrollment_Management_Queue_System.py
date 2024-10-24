@@ -1,12 +1,15 @@
 class Node:
     """Node class for linked list implementation."""
+
     def __init__(self, name, is_pwd=False):
         self.name = name
         self.is_pwd = is_pwd
         self.next = None
 
+
 class EnrollmentQueue:
     """Linked-list-based enrollment queue with PWD priority."""
+
     def __init__(self):
         self.pwd_head = None  # Head of the PWD queue
         self.pwd_tail = None  # Tail of the PWD queue
@@ -80,6 +83,7 @@ class EnrollmentQueue:
                 print(current.name, end=" -> " if current.next else "\n")
                 current = current.next
 
+
 def main():
     queue = EnrollmentQueue()
 
@@ -107,6 +111,7 @@ def main():
             break
         else:
             print("Invalid choice, please try again.")
+
 
 if __name__ == "__main__":
     main()
